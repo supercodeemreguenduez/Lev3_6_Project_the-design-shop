@@ -1,0 +1,261 @@
+/* === GENERAL === */
+ 
+/* Font: Karla
+Farbe: #323A45 / #848484 */
+/* font-family: 'Karla', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+html {
+        font-size: 62.5%;
+        width: 80%;
+        margin: 0 auto;
+}
+
+body {
+        max-width: 1440px;
+        margin: 5% auto 0 auto;
+        font-family: 'Karla', sans-serif;
+}
+
+img {
+        max-width: 100%;
+}
+
+img:hover {
+        opacity: .4;
+}
+
+p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: #323A45;
+}
+
+
+.grid1 {
+    display: grid;
+    grid-template-rows: 1fr 0.75fr 0.75fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+            "img1 img1 img1"
+            "img2 img3 img4"
+            "img5 img6 img7"
+    ;
+    gap: 30px;
+    margin: 0 0 30px 0;
+}
+
+.img1 {
+    grid-area: img1;
+}
+
+.img2 {
+    grid-area: img2;
+}
+
+.img3 {
+    grid-area: img3;
+}
+
+.img4 {
+    grid-area: img4;
+}
+
+.img5 {
+    grid-area: img5;
+}
+
+.img6 {
+    grid-area: img6;
+}
+
+.img7 {
+    grid-area: img7;
+}
+
+.img1>div,
+.img2>div,
+.img3>div,
+.img4>div,
+.img5>div,
+.img6>div,
+.img7>div {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 0 0;
+}
+
+.img1 div div p:nth-of-type(2),
+.img2 div div p:nth-of-type(2),
+.img3 div div p:nth-of-type(2),
+.img4 div div p:nth-of-type(2),
+.img5 div div p:nth-of-type(2),
+.img6 div div p:nth-of-type(2),
+.img7 div div p:nth-of-type(2) {
+    color: #848484;
+    margin: 0 0 20px 0;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-rows: 1fr 0.75fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+            "img8 img8 img8"
+            "img9 img10 img11"
+    ;
+    gap: 30px;
+    margin: 0 0 40px 0;
+}
+
+.img8 {
+    grid-area: img8;
+}
+
+.img9 {
+    grid-area: img9;
+}
+
+.img10 {
+    grid-area: img10;
+}
+
+.img11 {
+    grid-area: img11;
+}
+
+.img8>div,
+.img9>div,
+.img10>div,
+.img11>div {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 0 0;
+}
+
+.img8 div div p:nth-of-type(2),
+.img9 div div p:nth-of-type(2),
+.img10 div div p:nth-of-type(2),
+.img11 div div p:nth-of-type(2) {
+    color: #848484;
+    margin: 0 0 20px 0;
+}
+
+ /* ====== HEADER / NAV ====== */
+ header {
+    padding: 5% 0;
+}
+
+header nav h1 {
+    font-size: 2.5rem;
+    transition: all .5s;
+    font-weight: 700;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav div {
+    display: none;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: baseline;
+    gap: 8rem;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #323A45;
+    font-weight: 700;
+    transition: all .5s;
+}
+
+.hover:hover {
+    opacity: 0.4;
+    transition: all .4s;
+    cursor: pointer;
+}
+/* ====== MAIN ====== */
+
+
+ 
+ /* ====== FOOTER ====== */
+
+ .footerNav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    font-size: 1.5rem;
+}
+
+.footerNav>* {
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+.footerNav h2 {
+    margin-bottom: 6rem;
+}
+
+.footerNav div {
+    Nav-height: 1.5rem;
+}
+
+.footerNav a {
+    font-weight: 600;
+}
+
+.footerNav div:first-of-type {
+    width: 150%;
+}
+
+.footerNav div:nth-of-type(2) {
+    width: 50%;
+}
+
+.footerNav div:nth-of-type(3) p:last-of-type {
+    font-style: italic;
+}
+
+footer>p {
+    font-size: 1.5rem;
+    color: #848484;
+    margin: 2.5rem 0;
+}
+
+.footerNav div ul li a:link {
+    text-decoration: none;
+  } 
+
+
+ /* ============ MEDIA QUERIES =========== */
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+
+        header div {
+                display: block;
+        }
+
+        .grid1,
+        .grid2 {
+                display: flex;
+                flex-direction: column;
+        }
+
+        .footerNav {
+            flex-wrap: wrap;
+        }
+    }
